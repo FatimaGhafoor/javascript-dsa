@@ -1,0 +1,14 @@
+// Leetcode#561 - Array Partition
+function arrayPairSum(nums) {
+  nums.sort((a, b) => a - b);
+
+  let maxSum = 0;
+
+  for (let i = 0; i < nums.length; i += 2) {
+    maxSum += nums[i];
+  }
+  return maxSum;
+}
+
+// Time Complexity:  O(N log N)
+// Space Complexity: O(N)
